@@ -2,6 +2,7 @@ package com.my.bloggy.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -14,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Comments {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String comments;
     
     @ManyToOne

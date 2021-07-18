@@ -1,0 +1,19 @@
+ <div className="container">
+            <div className="wrapper">
+                <form className="form-group">
+                    <div className="form-group">
+                        <label>Description</label>
+                        <input type="text" name="description" onChange={descriptionHandler} id="description" placeholder="Something that I need to know" />
+                    </div>
+                    <div className="form-group">
+                        <label>Content</label>
+                        <textarea type="text" cols="25" name="content" onChange={contentHandler} id="content" placeholder="Something that I need to know" />
+                    </div>
+                    <div className="form-group">
+
+                        <input type="submit" onClick={submitHandler} value="Click Me!" />
+                    </div>
+                </form>
+
+            </div>
+        </div >

@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <NavBarComp />
-      <BlogsContainer />
-      {/* <WriterComp /> */}
+      {/* <BlogsContainer /> */}
+      <WriterComp />
     </>
   );
 }

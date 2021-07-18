@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import Editor from 'ckeditor5-custom-build';
+//import ClassicEditor from './build/ckeditor';
 import axios from 'axios'
 import Form from 'react-bootstrap/Form'
+//import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 
 export default function WriterComp() {
@@ -55,8 +58,8 @@ export default function WriterComp() {
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Example textarea</Form.Label>
                         <CKEditor
-                            editor={ClassicEditor}
-                            data="<p>Hello from CKEditor 5!</p>"
+                            editor={Editor}
+                            data=""
                             onReady={editor => {
                                 // You can store the "editor" and use when it is needed.
                                 console.log('Editor is ready to use!', editor);

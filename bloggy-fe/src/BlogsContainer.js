@@ -21,20 +21,22 @@ export default function BlogsContainer() {
 
 
     return (
-        <div>
+        <div className="container">
+            <div className="wrapper">
 
-            {api.map(i => <>
-                <Card style={{ width: '18rem', marginLeft: "18rem", textAlign: "centre" }}>
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{i.description}</Card.Subtitle>
-                        <Card.Text>{ReactHtmlParser(i.content)} </Card.Text>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
-                    </Card.Body>
-                </Card>
-                <p></p>
-                <p></p></>)}
+                {api.map(i => <>
+                    <Card style={{ width: '18rem', marginLeft: "18rem", textAlign: "centre" }}>
+                        <Card.Body>
+                            <Card.Title>Card Title</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">{i.description}</Card.Subtitle>
+                            <Card.Text>{ReactHtmlParser(i.content)} </Card.Text>
+                            <Card.Link href="#">Card Link</Card.Link>
+                            <Card.Link href="#">Another Link</Card.Link>
+                        </Card.Body>
+                    </Card>
+                    <p></p>
+                    <p></p></>)}
+            </div>
         </div>
     )
 }
